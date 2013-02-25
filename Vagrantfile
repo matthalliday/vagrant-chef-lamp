@@ -38,16 +38,18 @@ Vagrant::Config.run do |config|
     chef.add_recipe "apache2::mod_rewrite"
     chef.add_recipe "mysql"
     chef.add_recipe "mysql::server"
-    chef.add_recipe "phpmyadmin"
     chef.add_recipe "php"
     chef.add_recipe "php::module_apc"
     chef.add_recipe "php::module_curl"
     chef.add_recipe "php::module_mysql"
+    # chef.add_recipe "phpmyadmin"
 
     chef.json = {
       :mysql => {
-        :server_root_password => "root",
-        :bind_address         => "127.0.0.1"
+        :server_debian_password => "root",
+        :server_repl_password   => "root",
+        :server_root_password   => "root",
+        :bind_address           => "127.0.0.1"
       }
     }
   end
