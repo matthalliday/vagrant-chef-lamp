@@ -29,20 +29,9 @@ Vagrant::Config.run do |config|
   # some recipes and/or roles.
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "cookbooks"
+    chef.data_bags_path = "data_bags"
 
-    chef.add_recipe "apt"
-    chef.add_recipe "build-essential"
-    chef.add_recipe "openssl"
-    chef.add_recipe "apache2"
-    chef.add_recipe "apache2::mod_php5"
-    chef.add_recipe "apache2::mod_rewrite"
-    chef.add_recipe "mysql"
-    chef.add_recipe "mysql::server"
-    chef.add_recipe "php"
-    chef.add_recipe "php::module_apc"
-    chef.add_recipe "php::module_curl"
-    chef.add_recipe "php::module_mysql"
-    # chef.add_recipe "phpmyadmin"
+    chef.add_recipe "vagrant_main"
 
     chef.json = {
       :mysql => {
