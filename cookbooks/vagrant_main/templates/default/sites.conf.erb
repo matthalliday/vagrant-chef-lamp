@@ -66,4 +66,7 @@
   RewriteLog <%= node[:apache][:log_dir] %>/<%= @application_name %>-rewrite.log
   # level 0 => Do not log rewrite
   RewriteLogLevel 0
+  <% if @params[:rewrite_map] -%>
+  RewriteMap <%= @params[:rewrite_map] %> txt:<%= @params[:docroot] %>/mod_rewrite.txt
+  <% end -%>
 </VirtualHost>
