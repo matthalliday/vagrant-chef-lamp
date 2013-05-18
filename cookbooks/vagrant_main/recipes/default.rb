@@ -10,6 +10,7 @@ include_recipe "php"
 include_recipe "php::module_apc"
 include_recipe "php::module_curl"
 include_recipe "php::module_mysql"
+include_recipe "composer"
 
 # Initialize sites data bag
 sites = []
