@@ -49,7 +49,9 @@ end
 cookbook_file "/tmp/phpmyadmin.deb.conf" do
   source "phpmyadmin.deb.conf"
 end
+
 bash "debconf_for_phpmyadmin" do
   code "debconf-set-selections /tmp/phpmyadmin.deb.conf"
 end
+
 package "phpmyadmin"

@@ -17,6 +17,11 @@ Vagrant.configure("2") do |config|
   # using a specific IP.
   config.vm.network :private_network, ip: "33.33.33.10"
 
+  # Create a public network, which generally matched to bridged network.
+  # Bridged networks make the machine appear as another physical device on
+  # your network.
+  # config.vm.network :public_network
+
   # Forward a port from the guest to the host, which allows for outside
   # computers to access the VM, whereas host only networking does not.
   config.vm.network :forwarded_port, guest: 80, host: 8080
@@ -31,9 +36,15 @@ Vagrant.configure("2") do |config|
   # path, and data_bags path (all relative to this Vagrantfile), and adding
   # some recipes and/or roles.
   config.vm.provision :chef_solo do |chef|
+    # Set paths to Chef resources
     chef.cookbooks_path = "cookbooks"
     chef.data_bags_path = "data_bags"
-    chef.add_recipe "vagrant_main"
+    chef.roles_path     = "roles"
+
+    # Set role to webserver
+    chef.add_role "webserver"
+
+    # Set additional config attribtues
     chef.json = {
       :mysql => {
         :server_debian_password => "root",
