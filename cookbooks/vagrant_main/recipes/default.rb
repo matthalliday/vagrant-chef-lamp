@@ -31,7 +31,7 @@ sites.each do |name|
     server_name site["host"]
     server_aliases site["aliases"]
     docroot site["docroot"] ? site["docroot"] : "/var/www/#{site["host"]}"
-    rewrite_map site["rewrite_map"] if site["rewrite_map"]
+    rewrite_maps site["rewrite_maps"] if site["rewrite_maps"]
   end
 
    # Add site info in /etc/hosts

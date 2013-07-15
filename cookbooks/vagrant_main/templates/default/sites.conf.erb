@@ -31,8 +31,11 @@
   RewriteLog <%= node[:apache][:log_dir] %>/<%= @application_name %>-rewrite.log
   # level 0 => Do not log rewrite
   RewriteLogLevel 0
-  <% if @params[:rewrite_map] -%>
-  RewriteMap <%= @params[:rewrite_map] %> txt:<%= @params[:docroot] %>/mod_rewrite.txt
+
+  <% if @params[:rewrite_maps] -%>
+    <% @params[:rewrite_maps].each do |map| %>
+      RewriteMap <%= map[0] %> txt:<%= @params[:docroot] %>/<%= map[1] %>.txt
+    <% end %>
   <% end -%>
 </VirtualHost>
 
@@ -69,4 +72,10 @@
   RewriteLog <%= node[:apache][:log_dir] %>/<%= @application_name %>-rewrite.log
   # level 0 => Do not log rewrite
   RewriteLogLevel 0
+
+  <% if @params[:rewrite_maps] -%>
+    <% @params[:rewrite_maps].each do |map| %>
+      RewriteMap <%= map[0] %> txt:<%= @params[:docroot] %>/<%= map[1] %>.txt
+    <% end %>
+  <% end -%>
 </VirtualHost>
