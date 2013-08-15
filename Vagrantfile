@@ -47,17 +47,9 @@ Vagrant.configure("2") do |config|
     chef.data_bags_path = "data_bags"
     chef.roles_path     = "roles"
 
-    # Set role to webserver
-    chef.add_role "webserver"
-
-    # Set additional config attribtues
-    chef.json = {
-      :mysql => {
-        :server_debian_password => "root",
-        :server_repl_password   => "root",
-        :server_root_password   => "root",
-        :bind_address           => "127.0.0.1"
-      }
-    }
+    # Add various developer roles
+    chef.add_role "base"
+    chef.add_role "php_dev"
+    chef.add_role "ruby_dev"
   end
 end

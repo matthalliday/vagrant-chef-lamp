@@ -1,5 +1,3 @@
-.DS_Store
 .vagrant
-www/*.dev
-www/*.test
-data_bags/sites/*.json
+www/*
+data_bags/sites/*
