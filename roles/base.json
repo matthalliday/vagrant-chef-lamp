@@ -1,0 +1,19 @@
+{
+	"name": "base",
+	"chef_type": "role",
+	"json_class": "Chef::Role",
+	"description": "The base role for a dev environment",
+	"run_list": [
+		"recipe[apt]",
+		"recipe[build-essential]",
+		"recipe[git]",
+		"recipe[openssl]",
+		"recipe[tmux]",
+		"recipe[vim]"
+	],
+	"override_attributes": {
+		"vim": {
+			"extra_packages": ["vim-rails"]
+		}
+	}
+}

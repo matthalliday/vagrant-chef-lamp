@@ -1,20 +1,3 @@
-include_recipe "apt"
-include_recipe "build-essential"
-include_recipe "openssl"
-include_recipe "apache2"
-include_recipe "apache2::mod_php5"
-include_recipe "apache2::mod_rewrite"
-include_recipe "mysql"
-include_recipe "mysql::server"
-include_recipe "php"
-include_recipe "php::module_apc"
-include_recipe "php::module_curl"
-include_recipe "php::module_mysql"
-include_recipe "composer"
-include_recipe "vim"
-include_recipe "rbenv"
-include_recipe "rbenv::ruby_build"
-
 # Initialize sites data bag
 sites = []
 begin
@@ -42,11 +25,6 @@ sites.each do |name|
    end
 end
 
-# Disable default site
-apache_site "default" do
-  enable false
-end
-
 # Install phpmyadmin
 cookbook_file "/tmp/phpmyadmin.deb.conf" do
   source "phpmyadmin.deb.conf"
@@ -57,17 +35,3 @@ bash "debconf_for_phpmyadmin" do
 end
 
 package "phpmyadmin"
-
-# Install Ruby and Gems
-rbenv_ruby "2.0.0-p247" do
-  ruby_version "2.0.0-p247"
-  global true
-end
-
-rbenv_gem "bundler" do
-  ruby_version "2.0.0-p247"
-end
-
-rbenv_gem "rails" do
-  ruby_version "2.0.0-p247"
-end
