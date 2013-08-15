@@ -1,4 +1,4 @@
-vagrant-chef-lamp
-=================
+Vagrant Dev Box
+===============
 
-Über-simple lamp stack using Chef and Vagrant.
+A no-nonsense environment for Ruby and PHP development.
