@@ -18,7 +18,7 @@
 	],
 	"override_attributes": {
 		"apache": {
-			"default_site_enabled": "true",
+			"default_site_enabled": "false",
 			"dir":                  "/etc/apache2",
 			"log_dir":              "/var/log/apache2",
 			"error_log":            "error.log",
