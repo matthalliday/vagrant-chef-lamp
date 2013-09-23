@@ -38,18 +38,20 @@ Vagrant.configure("2") do |config|
     vb.customize ["modifyvm", :id, "--memory", "512"]
   end
 
+  # Enable vagrant-berkshelf plugin for managing cookbooks (and dependencies)
+  config.berkshelf.enabled = true
+
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
   # path, and data_bags path (all relative to this Vagrantfile), and adding
   # some recipes and/or roles.
   config.vm.provision :chef_solo do |chef|
     # Set paths to Chef resources
-    chef.cookbooks_path = "cookbooks"
     chef.data_bags_path = "data_bags"
     chef.roles_path     = "roles"
 
     # Add various developer roles
     chef.add_role "base"
     chef.add_role "php_dev"
-    chef.add_role "ruby_dev"
+    # chef.add_role "ruby_dev"
   end
 end

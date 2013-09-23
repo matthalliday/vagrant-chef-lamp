@@ -1,3 +1,4 @@
 .vagrant
+Berksfile.lock
 www/*
 data_bags/sites/*

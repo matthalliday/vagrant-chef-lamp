@@ -7,7 +7,7 @@
 		"recipe[postgresql::server]",
 		"recipe[rbenv]",
 		"recipe[rbenv::ruby_build]",
-		"recipe[vagrant_main::ruby_dev]"
+		"recipe[chef-webapp::ruby_dev]"
 	],
 	"override_attributes": {
 		"postgresql": {
