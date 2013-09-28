@@ -52,6 +52,6 @@ Vagrant.configure("2") do |config|
     # Add various developer roles
     chef.add_role "base"
     chef.add_role "php_dev"
-    # chef.add_role "ruby_dev"
+    chef.add_role "ruby_dev"
   end
 end
