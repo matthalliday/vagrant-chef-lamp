@@ -1,0 +1,16 @@
+site :opscode
+
+cookbook 'apache2'
+cookbook 'apt'
+cookbook 'build-essential'
+cookbook 'composer'
+cookbook 'git'
+cookbook 'mysql'
+cookbook 'openssl'
+cookbook 'php'
+cookbook 'postgresql'
+cookbook 'rbenv', github: 'fnichol/chef-rbenv', ref: 'v0.7.2'
+cookbook 'ruby_build'
+cookbook 'tmux'
+cookbook 'vim'
+cookbook 'chef-webapp', github: 'matthalliday/chef-webapp'

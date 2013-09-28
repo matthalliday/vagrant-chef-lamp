@@ -14,7 +14,7 @@
 		"recipe[php::module_apc]",
 		"recipe[php::module_curl]",
 		"recipe[php::module_mysql]",
-		"recipe[vagrant_main::php_dev]"
+		"recipe[chef-webapp::php_dev]"
 	],
 	"override_attributes": {
 		"apache": {

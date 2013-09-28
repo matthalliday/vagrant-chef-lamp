@@ -4,10 +4,10 @@
 	"json_class": "Chef::Role",
 	"description": "The role for Ruby development",
 	"run_list": [
+		"recipe[ruby_build]",
+		"recipe[rbenv::system_install]",
 		"recipe[postgresql::server]",
-		"recipe[rbenv]",
-		"recipe[rbenv::ruby_build]",
-		"recipe[vagrant_main::ruby_dev]"
+		"recipe[chef-webapp::ruby_dev]"
 	],
 	"override_attributes": {
 		"postgresql": {
