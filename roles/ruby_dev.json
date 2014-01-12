@@ -6,7 +6,7 @@
 	"run_list": [
 		"recipe[ruby_build]",
 		"recipe[rbenv::system_install]",
-		"recipe[postgresql::server]",
+		"recipe[postgresql]",
 		"recipe[chef-webapp::ruby_dev]"
 	],
 	"override_attributes": {
@@ -37,10 +37,7 @@
 					"addr":   "::1/0",
 					"method": "md5"
 				}
-			],
-			"password": {
-				"postgres": "root"
-			}
+			]
 		}
 	}
 }
