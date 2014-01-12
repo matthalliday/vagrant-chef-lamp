@@ -34,9 +34,9 @@ Vagrant.configure("2") do |config|
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
-  config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "512"]
-  end
+  # config.vm.provider :virtualbox do |vb|
+  #   vb.customize ["modifyvm", :id, "--memory", "512"]
+  # end
 
   # Enable vagrant-berkshelf plugin for managing cookbooks (and dependencies)
   config.berkshelf.enabled = true
