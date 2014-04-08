@@ -30,12 +30,13 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder "www", "/var/www", nfs: true
+  config.vm.synced_folder "www", "/var/www"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
   # config.vm.provider :virtualbox do |vb|
-  #   vb.customize ["modifyvm", :id, "--memory", "512"]
+  #   vb.customize ["modifyvm", :id, "--cpuexecutioncap", "75"]
+  #   vb.customize ["modifyvm", :id, "--memory", "768"]
   # end
 
   # Enable vagrant-berkshelf plugin for managing cookbooks (and dependencies)
@@ -52,6 +53,5 @@ Vagrant.configure("2") do |config|
     # Add various developer roles
     chef.add_role "base"
     chef.add_role "php_dev"
-    chef.add_role "ruby_dev"
   end
 end
