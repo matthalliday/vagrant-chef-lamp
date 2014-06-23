@@ -11,6 +11,7 @@
 		"recipe[mysql::server]",
 		"recipe[php]",
 		"recipe[php::module_apc]",
+		"recipe[php::module_gd]",
 		"recipe[php::module_curl]",
 		"recipe[php::module_mysql]",
 		"recipe[chef-webapp::php_dev]"
