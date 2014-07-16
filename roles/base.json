@@ -8,12 +8,6 @@
 		"recipe[build-essential]",
 		"recipe[git]",
 		"recipe[openssl]",
-		"recipe[tmux]",
 		"recipe[vim]"
-	],
-	"override_attributes": {
-		"vim": {
-			"extra_packages": ["vim-rails"]
-		}
-	}
+	]
 }
