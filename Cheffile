@@ -1,0 +1,11 @@
+site "https://supermarket.getchef.com/api/v1"
+
+cookbook "apache2"
+cookbook "apt"
+cookbook "build-essential"
+cookbook "git"
+cookbook "mysql"
+cookbook "openssl"
+cookbook "php"
+cookbook "vim"
+cookbook "chef-webapp", github: "matthalliday/chef-webapp"

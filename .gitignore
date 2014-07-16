@@ -1,3 +1,5 @@
 .vagrant
-www/*
-data_bags/sites/*
+tmp/
+www/
+cookbooks/
+data_bags/sites/
