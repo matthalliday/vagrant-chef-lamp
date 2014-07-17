@@ -1,10 +1,16 @@
 # Vagrant Dev Box
 
-A no-nonsense environment for Ruby and PHP development.
+A no-nonsense environment for PHP development.
 
 ## Requirements
 
-This Vagrantfile configuration requires Vagrant 1.2+, VirtualBox and vagrant-berkshelf.
+This Vagrantfile configuration requires Vagrant 1.5+, VirtualBox, vagrant-omnibus and librarian-chef
+
+## Installation
+1. Install Librarian Chef `gem install librarian-chef`
+2. Get cookbooks `librarian-chef install`
+3. Install vagrant-omnibus `vagrant plugin install vagrant-omnibus`
+4. Provision box `vagrant up`
 
 ## Contributing
 
