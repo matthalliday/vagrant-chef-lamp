@@ -10,6 +10,7 @@ SITE
     chef-sugar (2.0.0)
     chef_handler (1.1.6)
     dmg (2.2.0)
+    freebsd (0.1.4)
     git (4.0.2)
       build-essential (>= 0.0.0)
       dmg (>= 0.0.0)
