@@ -10,7 +10,6 @@ SITE
     chef-sugar (2.0.0)
     chef_handler (1.1.6)
     dmg (2.2.0)
-    freebsd (0.1.4)
     git (4.0.2)
       build-essential (>= 0.0.0)
       dmg (>= 0.0.0)
@@ -53,9 +52,9 @@ SITE
 GIT
   remote: https://github.com/matthalliday/chef-webapp
   ref: master
-  sha: 8e8d8537d1035655a0f8458e91edf381df0697fb
+  sha: f61daba0bc82031fc76371f1e60434f97aea888c
   specs:
-    chef-webapp (0.1.0)
+    chef-webapp (0.2.0)
       apache2 (>= 0.0.0)
 
 DEPENDENCIES
