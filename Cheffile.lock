@@ -1,13 +1,13 @@
 SITE
   remote: https://supermarket.getchef.com/api/v1
   specs:
-    apache2 (1.10.4)
+    apache2 (2.0.0)
       iptables (>= 0.0.0)
       logrotate (>= 0.0.0)
       pacman (>= 0.0.0)
-    apt (2.4.0)
-    build-essential (2.0.4)
-    chef-sugar (2.0.0)
+    apt (2.5.3)
+    build-essential (2.0.6)
+    chef-sugar (2.2.0)
     chef_handler (1.1.6)
     dmg (2.2.0)
     git (4.0.2)
@@ -21,7 +21,7 @@ SITE
       windows (>= 1.2.6)
     iptables (0.13.2)
     logrotate (1.6.0)
-    mysql (5.3.6)
+    mysql (5.4.3)
       yum-mysql-community (>= 0.0.0)
     openssl (2.0.0)
       chef-sugar (>= 0.0.0)
@@ -38,16 +38,16 @@ SITE
       yum (~> 3.0)
       yum-epel (>= 0.0.0)
     vim (1.1.2)
-    windows (1.32.3)
+    windows (1.34.2)
       chef_handler (>= 0.0.0)
     xml (1.2.6)
       build-essential (>= 0.0.0)
       chef-sugar (>= 0.0.0)
-    yum (3.2.2)
-    yum-epel (0.3.6)
+    yum (3.2.4)
+    yum-epel (0.4.0)
       yum (~> 3.0)
-    yum-mysql-community (0.1.8)
-      yum (>= 3.0.0)
+    yum-mysql-community (0.1.10)
+      yum (>= 3.0)
 
 GIT
   remote: https://github.com/matthalliday/chef-webapp
